@@ -1,0 +1,110 @@
+[
+    {
+        "label": "osmnx",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "osmnx",
+        "description": "osmnx",
+        "detail": "osmnx",
+        "documentation": {}
+    },
+    {
+        "label": "point",
+        "kind": 5,
+        "importPath": "createMapRoads",
+        "description": "createMapRoads",
+        "peekOfCode": "point = (52.239583153299286, 21.02479668643565)\nG = ox.graph_from_point(\n    point, dist=10000, retain_all=True, simplify=True, network_type=\"all\"\n)\nu = []\nv = []\nkey = []\ndata = []\nfor uu, vv, kkey, ddata in G.edges(keys=True, data=True):\n    u.append(uu)",
+        "detail": "createMapRoads",
+        "documentation": {}
+    },
+    {
+        "label": "G",
+        "kind": 5,
+        "importPath": "createMapRoads",
+        "description": "createMapRoads",
+        "peekOfCode": "G = ox.graph_from_point(\n    point, dist=10000, retain_all=True, simplify=True, network_type=\"all\"\n)\nu = []\nv = []\nkey = []\ndata = []\nfor uu, vv, kkey, ddata in G.edges(keys=True, data=True):\n    u.append(uu)\n    v.append(vv)",
+        "detail": "createMapRoads",
+        "documentation": {}
+    },
+    {
+        "label": "u",
+        "kind": 5,
+        "importPath": "createMapRoads",
+        "description": "createMapRoads",
+        "peekOfCode": "u = []\nv = []\nkey = []\ndata = []\nfor uu, vv, kkey, ddata in G.edges(keys=True, data=True):\n    u.append(uu)\n    v.append(vv)\n    key.append(kkey)\n    data.append(ddata)\nroadColors = []",
+        "detail": "createMapRoads",
+        "documentation": {}
+    },
+    {
+        "label": "v",
+        "kind": 5,
+        "importPath": "createMapRoads",
+        "description": "createMapRoads",
+        "peekOfCode": "v = []\nkey = []\ndata = []\nfor uu, vv, kkey, ddata in G.edges(keys=True, data=True):\n    u.append(uu)\n    v.append(vv)\n    key.append(kkey)\n    data.append(ddata)\nroadColors = []\nroadWidths = []",
+        "detail": "createMapRoads",
+        "documentation": {}
+    },
+    {
+        "label": "key",
+        "kind": 5,
+        "importPath": "createMapRoads",
+        "description": "createMapRoads",
+        "peekOfCode": "key = []\ndata = []\nfor uu, vv, kkey, ddata in G.edges(keys=True, data=True):\n    u.append(uu)\n    v.append(vv)\n    key.append(kkey)\n    data.append(ddata)\nroadColors = []\nroadWidths = []\nfor item in data:",
+        "detail": "createMapRoads",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "createMapRoads",
+        "description": "createMapRoads",
+        "peekOfCode": "data = []\nfor uu, vv, kkey, ddata in G.edges(keys=True, data=True):\n    u.append(uu)\n    v.append(vv)\n    key.append(kkey)\n    data.append(ddata)\nroadColors = []\nroadWidths = []\nfor item in data:\n    if \"length\" in item.keys():",
+        "detail": "createMapRoads",
+        "documentation": {}
+    },
+    {
+        "label": "roadColors",
+        "kind": 5,
+        "importPath": "createMapRoads",
+        "description": "createMapRoads",
+        "peekOfCode": "roadColors = []\nroadWidths = []\nfor item in data:\n    if \"length\" in item.keys():\n        if item[\"length\"] <= 100:\n            linewidth = 0.10\n            color = \"#a6a6a6\"\n        elif item[\"length\"] > 100 and item[\"length\"] <= 200:\n            linewidth = 0.15\n            color = \"#676767\"",
+        "detail": "createMapRoads",
+        "documentation": {}
+    },
+    {
+        "label": "roadWidths",
+        "kind": 5,
+        "importPath": "createMapRoads",
+        "description": "createMapRoads",
+        "peekOfCode": "roadWidths = []\nfor item in data:\n    if \"length\" in item.keys():\n        if item[\"length\"] <= 100:\n            linewidth = 0.10\n            color = \"#a6a6a6\"\n        elif item[\"length\"] > 100 and item[\"length\"] <= 200:\n            linewidth = 0.15\n            color = \"#676767\"\n        elif item[\"length\"] > 200 and item[\"length\"] <= 400:",
+        "detail": "createMapRoads",
+        "documentation": {}
+    },
+    {
+        "label": "latitude",
+        "kind": 5,
+        "importPath": "createMapRoads",
+        "description": "createMapRoads",
+        "peekOfCode": "latitude = 52.239583153299286\nlongitude = 21.02479668643565\nbgcolor = \"#061529\"\nfig, ax = ox.plot_graph(\n    G,\n    node_size=0,\n    figsize=(40, 60),\n    dpi=1200,\n    bgcolor=bgcolor,\n    save=False,",
+        "detail": "createMapRoads",
+        "documentation": {}
+    },
+    {
+        "label": "longitude",
+        "kind": 5,
+        "importPath": "createMapRoads",
+        "description": "createMapRoads",
+        "peekOfCode": "longitude = 21.02479668643565\nbgcolor = \"#061529\"\nfig, ax = ox.plot_graph(\n    G,\n    node_size=0,\n    figsize=(40, 60),\n    dpi=1200,\n    bgcolor=bgcolor,\n    save=False,\n    edge_color=roadColors,",
+        "detail": "createMapRoads",
+        "documentation": {}
+    },
+    {
+        "label": "bgcolor",
+        "kind": 5,
+        "importPath": "createMapRoads",
+        "description": "createMapRoads",
+        "peekOfCode": "bgcolor = \"#061529\"\nfig, ax = ox.plot_graph(\n    G,\n    node_size=0,\n    figsize=(40, 60),\n    dpi=1200,\n    bgcolor=bgcolor,\n    save=False,\n    edge_color=roadColors,\n    edge_linewidth=roadWidths,",
+        "detail": "createMapRoads",
+        "documentation": {}
+    }
+]
