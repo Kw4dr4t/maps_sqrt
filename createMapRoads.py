@@ -1,6 +1,8 @@
 import osmnx as ox
 
-point = (52.239583153299286, 21.02479668643565)
+latitude = float(input('Latitude:'))
+longitude = float(input('Longitude:'))
+point = (latitude, longitude)
 G = ox.graph_from_point(
     point, dist=10000, retain_all=True, simplify=True, network_type="all"
 )
@@ -25,15 +27,15 @@ for item in data:
             linewidth = 0.10
             color = "#a6a6a6"
 
-        elif item["length"] > 100 and item["length"] <= 200:
+        elif item["length"] <= 200:
             linewidth = 0.15
             color = "#676767"
 
-        elif item["length"] > 200 and item["length"] <= 400:
+        elif item["length"] <= 400:
             linewidth = 0.25
             color = "#454545"
 
-        elif item["length"] > 400 and item["length"] <= 800:
+        elif item["length"] <= 800:
             color = "#d5d5d5"
             linewidth = 0.35
         else:
@@ -48,8 +50,8 @@ for item in data:
 
 
 # Center of map
-latitude = 52.239583153299286
-longitude = 21.02479668643565
+# latitude = 52.239583153299286
+# longitude = 21.02479668643565
 
 bgcolor = "#061529"
 
@@ -64,7 +66,6 @@ fig, ax = ox.plot_graph(
     edge_linewidth=roadWidths,
     edge_alpha=1,
 )
-
 
 
 fig.tight_layout(pad=0)
