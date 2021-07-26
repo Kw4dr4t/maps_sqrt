@@ -1,6 +1,14 @@
 # Map Generator
 Program to create Black&White map graphics. Made just for fun.
+```
+python createMapRoads.py
+```
+Latitude =
 
+Longitude =
+
+Enter latitude and longitude in decimal degrees. Location is center of map. Words, names etc, I add it in a graphics software.
+Enjoy.
 ## Example
 ![alt text](jpg/london_01.jpg)
 
